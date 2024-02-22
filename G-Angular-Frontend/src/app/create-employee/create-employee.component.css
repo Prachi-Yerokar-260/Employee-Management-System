@@ -1,0 +1,29 @@
+header h3 {
+    font-size: 30px;
+    font-weight: 600;
+   
+    background-image: radial-gradient(ellipse, #553c9a, #ee4b2b);
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  label {
+    color: #6ba7b4;
+    font-weight: bold;
+    width: 130px;
+    float: left;
+  
+  }
+  #register {
+    width: 400px;
+  }
+
+  #register2 {
+    width: 500px;
+  }
+  
+  #register2 p {
+    margin-top: 20px;
+  }

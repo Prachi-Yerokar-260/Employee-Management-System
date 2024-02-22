@@ -1,0 +1,44 @@
+<div class="container text-center">
+   <header>
+    <h3> Employee List</h3>
+    </header>
+    <br>
+    <br>
+    <div align="right">
+        <button class="btn btn-outline-secondary" routerLink="/AddEmployee" routerLinkActive="active">Add Employee</button>
+    </div>
+    <br>
+    <table class = "table table-striped">
+        <thead class="col-md-6">
+            <tr>
+                <th scope="row">No </th>
+                <th scope="row"> First Name</th>
+                <th scope="row"> Last Name </th>
+                <th scope="row"> Email Id</th>
+                <th scope="row"> Role</th>
+                <th scope="row"> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let employee of employees" >
+                <td>{{employee.id}}</td>
+                <td> {{ employee.firstName }} </td>
+                <td> {{ employee.lastName }} </td>
+                <td> {{ employee.emailId }} </td>
+                <td> {{ employee.role }} </td> 
+                <td>
+                    <button [routerLink] = "['/UpdateEmployee/',(employee.id)]" class = "btn btn-outline-dark"> Update</button>
+                    <button (click) = "deleteEmployee(employee.id)" class = "btn btn-outline-danger" style="margin-left: 10px"> Delete</button>
+                    <button [routerLink] = "['/EmployeeDetails/',(employee.id)]" class = "btn btn-outline-info" style="margin-left: 10px"> View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span>&copy; 2024 Employee-Management-System</span>
+    </div>
+</footer>
+
